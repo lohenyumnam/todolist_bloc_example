@@ -12,9 +12,7 @@ class MultiBlocProviderWrapper extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider<TodoListCubit>(
-          create: (context) => TodoListCubit(),
-        )
+        BlocProvider<TodoListCubit>(create: (context) => TodoListCubit()),
       ],
       child: child,
     );

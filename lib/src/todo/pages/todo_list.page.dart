@@ -19,10 +19,12 @@ class TodoListPage extends StatelessWidget {
         label: const Text('Add'),
         onPressed: () {
           final todoListCubit = context.read<TodoListCubit>();
-          todoListCubit.addTodo(TodoModel(
+          final newTodoModel = TodoModel(
             id: '${DateTime.now().millisecondsSinceEpoch}',
             title: 'New Todo',
-          ));
+          );
+
+          todoListCubit.addTodo(newTodoModel);
         },
       ),
     );

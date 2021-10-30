@@ -8,9 +8,7 @@ class TodoListState extends Equatable {
   @override
   List<Object?> get props => [todoList];
 
-  TodoListState copyWith({
-    List<TodoModel>? todoList,
-  }) {
+  TodoListState copyWith({List<TodoModel>? todoList}) {
     return TodoListState(
       todoList: todoList ?? this.todoList,
     );

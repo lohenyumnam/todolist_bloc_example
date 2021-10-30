@@ -10,7 +10,8 @@ class TodoListCubit extends Cubit<TodoListState> {
   TodoListCubit() : super(const TodoListState(todoList: []));
 
   void addTodo(TodoModel todo) {
-    emit(state.copyWith(todoList: [...state.todoList, todo]));
+    final newState = state.copyWith(todoList: [...state.todoList, todo]);
+    emit(newState);
   }
 
   /// This method is used to remove a todo from the list
